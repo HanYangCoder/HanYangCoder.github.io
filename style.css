@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+    font-family: 'Canva Sans', sans-serif;
+}
+body {
+    font-size: 1.6rem;
+}
+html, body {
+    min-height: 100%;
+    background: #fff;
+    color: #000;
+}
+
+/* Nav Menu */
+header {
+    position: fixed;
+    width: 100%;
+}
+.main-nav-menu {
+  margin: 30px auto;
+}
+.main-nav-list {
+  display: flex;
+  justify-content: center;
+}
+.main-nav-item {
+  list-style-type: none;
+  margin: 0 30px;
+  font-size: 1.8rem;
+}
+.main-nav-list a {
+    color: #000;
+    text-decoration: none;
+}
+.main-nav-list a:hover {
+    color: #0055ff;
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero-section h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+section.hero-section {
+    background-image: url('assets/bg-1.jpg') !important;
+    background-position: center;
+    display: flex;
+    min-height: 100vh;
+}
+section.hero-section .me-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1140px;
+    margin: auto;
+    text-align: center;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+section.hero-section .me-container img {
+    max-width: 200px;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+}
+section.hero-section .me-container > *:not(:last-child) {
+    margin-bottom: 40px;
+}
