@@ -22,16 +22,16 @@ header {
     width: 100%;
 }
 .main-nav-menu {
-  margin: 30px auto;
+    padding: 30px;
 }
 .main-nav-list {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 .main-nav-item {
-  list-style-type: none;
-  margin: 0 30px;
-  font-size: 1.8rem;
+    list-style-type: none;
+    margin: 0 30px;
+    font-size: 1.8rem;
 }
 .main-nav-list a {
     color: #000;
@@ -41,6 +41,22 @@ header {
     color: #0055ff;
     text-decoration: none;
 }
+.main-nav-menu.scrolled {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Sections styling */
+main .main-section{
+    background-position: center;
+    min-height: 100vh;
+    padding: 80px 50px;
+}
+main .hero-section, main .projects-section {
+    background-image: url('assets/bg-1.jpg') !important;
+}
+main .about-section, main .contact-section {
+    background-image: url('assets/bg-2.jpg') !important;
+}
 
 /* Hero Section */
 .hero-section h1 {
@@ -48,10 +64,7 @@ header {
     text-transform: uppercase;
 }
 section.hero-section {
-    background-image: url('assets/bg-1.jpg') !important;
-    background-position: center;
     display: flex;
-    min-height: 100vh;
 }
 section.hero-section .me-container {
     display: flex;
