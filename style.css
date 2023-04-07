@@ -1,3 +1,7 @@
+:root {
+    --container-border-radius: 10px;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -58,6 +62,12 @@ main .about-section, main .contact-section {
     background-image: url('assets/bg-2.jpg') !important;
 }
 
+h2.section-title {
+    text-align: center;
+    padding: 40px;
+    font-size: 2.15em;
+}
+
 /* Hero Section */
 .hero-section h1 {
     font-size: 3rem;
@@ -75,7 +85,7 @@ section.hero-section .me-container {
     text-align: center;
     padding: 50px;
     background: rgba(255, 255, 255, 0.5);
-    border-radius: 10px;
+    border-radius: var(--container-border-radius);
 }
 section.hero-section .me-container img {
     max-width: 200px;
@@ -84,4 +94,40 @@ section.hero-section .me-container img {
 }
 section.hero-section .me-container > *:not(:last-child) {
     margin-bottom: 40px;
+}
+
+/* About Me Section */
+.about-section .about-me-col-1, .about-section .about-me-col-2 {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.about-section .about-me-container {
+    display: flex;
+    max-width: 1140px;
+    margin: auto;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: var(--container-border-radius);
+    height: 60vh;
+}
+.about-me-col-1 .tech-used-img {
+    flex-basis: 33.3333%;
+    display: flex;
+    justify-content: center;
+}
+.about-me-col-1 .tech-used-img img {
+    max-height: 80px;
+    max-width: 140px;
+    margin: auto;
+}
+.about-section .about-me-col-2 {
+    text-align: center;
+    padding: 30px;
+}
+.about-me-col-2 p {
+    line-height: 2;
+    font-size: 1.15em;
+    margin: auto;
 }
