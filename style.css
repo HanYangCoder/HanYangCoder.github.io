@@ -1,5 +1,6 @@
 :root {
     --container-border-radius: 10px;
+    --container-box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, .2);
 }
 
 * {
@@ -24,6 +25,7 @@ html, body {
 header {
     position: fixed;
     width: 100%;
+    z-index: 99;
 }
 .main-nav-menu {
     padding: 30px;
@@ -46,7 +48,8 @@ header {
     text-decoration: none;
 }
 .main-nav-menu.scrolled {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, .1);
 }
 
 /* Sections styling */
@@ -61,11 +64,13 @@ main .hero-section, main .projects-section {
 main .about-section, main .contact-section {
     background-image: url('assets/bg-2.jpg') !important;
 }
-
 h2.section-title {
     text-align: center;
     padding: 40px;
     font-size: 2.15em;
+}
+.me-container, .about-me-container, .single-project-container {
+	box-shadow: var(--container-box-shadow);
 }
 
 /* Hero Section */
@@ -130,4 +135,42 @@ section.hero-section .me-container > *:not(:last-child) {
     line-height: 2;
     font-size: 1.15em;
     margin: auto;
+}
+
+/* My Projects Section */
+.projects-section .my-projects-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.projects-section .single-project-container {
+	max-width: 50%;
+	background: rgba(255, 255, 255, 0.8);
+	padding: 30px;
+    margin: 20px 0px;
+	border-radius: var(--container-border-radius);
+    text-align: center;
+}
+.single-project-container .project-title {
+	margin-bottom: 15px;
+    font-size: 1.25em;
+}
+.single-project-container img {
+	width: 100%;
+	max-height: 200px;
+	object-fit: cover;
+	margin-bottom: 20px;
+}
+.single-project-container a {
+    color: #000;
+    text-decoration: none;
+}
+.single-project-container a:hover h4 {
+    color: #0055ff;
+}
+.single-project-container a:hover img {
+    transform: scale(1.10);
+    transition: 0.5s ease;
 }
